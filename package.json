@@ -1,7 +1,7 @@
 {
   "name": "@transl8.ai/api-client",
   "private": false,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Command-line tool and typed HTTP client for the transl8.ai translation API.",
   "keywords": [
     "translation",
