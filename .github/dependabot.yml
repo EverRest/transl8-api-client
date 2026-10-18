@@ -21,6 +21,9 @@ updates:
       # A new TypeScript major changes the generated client output; update by hand.
       - dependency-name: typescript
         update-types: ['version-update:semver-major']
+      # @types/node must track the supported Node major (22).
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
