@@ -1,8 +1,8 @@
 # `@transl8.ai/api-client` changelog
 
-## Unreleased
+## 2.1.1 — 2026-10-18 — First release from the public repository
 
-- Source moved to the public repository EverRest/transl8-api-client. No code change.
+- **Changed:** the source moved to the public repository EverRest/transl8-api-client. The package is now built, tested and published by that repository's CI with npm trusted publishing and provenance. No code change.
 
 ## 2.1.0 — 2026-10-17 — Retry on rate limits
 
