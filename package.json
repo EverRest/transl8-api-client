@@ -1,0 +1,64 @@
+{
+  "name": "@transl8.ai/api-client",
+  "private": false,
+  "version": "2.1.0",
+  "description": "Command-line tool and typed HTTP client for the transl8.ai translation API.",
+  "keywords": [
+    "translation",
+    "localization",
+    "i18n",
+    "cli",
+    "api-client",
+    "transl8"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "bin": {
+    "transl8": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EverRest/transl8-api-client.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "generate": "orval --config orval.config.ts",
+    "cli-e2e": "node scripts/cli-e2e.mjs",
+    "prepublishOnly": "npm run build",
+    "sync-openapi": "node scripts/sync-openapi.mjs",
+    "check-spec": "node scripts/check-spec-record.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "esbuild": "^0.28.2",
+    "orval": "^8.27.0",
+    "typescript": "^5.8.2",
+    "vitest": "^5.0.4"
+  },
+  "homepage": "https://github.com/EverRest/transl8-api-client#readme",
+  "bugs": {
+    "url": "https://github.com/EverRest/transl8-api-client/issues"
+  }
+}
